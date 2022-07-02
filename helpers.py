@@ -54,7 +54,7 @@ def get_daily_count(date):
   )
   return count
 
-#
+# Takes in a start and end date and return the weather data as a dataframe
 def get_weather_data(start_date, end_date):
   query_string = f"""
   SELECT *
