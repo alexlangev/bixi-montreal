@@ -1,0 +1,24 @@
+# Predicting daily users of Bixi Montreal
+
+## Introduction
+[Bixi](https://bixi.com/en) is Montreal's public bike share program. It has been in service since 2014 and now has close to 800 stations with close to 10000 bikes in the network. A team of drivers and technicians has to manually move bicycles from filled stations to empty ones. For this reason, predicting the amount of daily uses could help with scheduling employees and in turn, save money.
+
+## Goal
+Collect Bixi's daily usage data. For each day of service, collect the weather data of Montreal. Once the data collected and cleaned, train a linear regression model to predict the amount of daily rides based on the weather conditions.
+
+## Data collection
+
+1. Bixi has an [open data page](https://bixi.com/en/open-data) where you can find zipped monthly files of data. Downloading and unzipping and naming them properly is too error prone since there are more than 60 of them. This is why I decided to scrape them.
+
+![bixi data](images\bixi-bike.jpg)
+
+2. As for the weather, the [Canadian government](https://climate.weather.gc.ca/climate_data/daily_data_e.html?StationID=51157&timeframe=2&StartYear=1840&EndYear=2022&Day=13&Year=2014&Month=4#) has daily and hourly history of different weather station's data, and one of them is in Montreal. 
+
+![weather data](images\montreal-daily-weathr.jpg)
+
+## Data cleaning and feature engineering
+
+The only cleaning I had to do was:
+- Convert the DAILY_COUNT column to an int
+- Replace the NAN values int the different columns with the previous day's values.
+
