@@ -1,5 +1,7 @@
 # Predicting daily users of Bixi Montreal
 
+## Contributing
+
 ## Introduction
 [Bixi](https://bixi.com/en) is Montreal's public bike share program. It has been in service since 2014 and now has close to 800 stations with close to 10000 bikes in the network. A team of drivers and technicians has to manually move bicycles from filled stations to empty ones. For this reason, predicting the amount of daily uses could help with scheduling employees and in turn, save money.
 
